@@ -1,0 +1,22 @@
+{
+  "name": "SmartCNX",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "ant-design-vue": "^1.6.5",
+    "axios": "^0.21.0",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.6"
+  },
+  "devDependencies": {
+    "sass": "^1.30.0",
+    "fibers": "^5.0.0",
+    "sass-loader": "^10.1.0"
+  }
+}
