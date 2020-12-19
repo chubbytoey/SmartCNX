@@ -18,8 +18,7 @@
       </div>
     </div>
     <div class="report">
-      <List />
-      <List />
+      <List v-for="item in reportData" :key="item.image" :data="item"/>
     </div>
   </div>
 </div>
@@ -28,10 +27,25 @@
 <script>
 import List from '../components/ReportList'
 import Title from '../components/Title'
+import axios from 'axios'
 export default {
   components: {
     List,
     Title
+  },data() {
+    return {
+      reportData: []
+    }
+  },
+   methods: {
+    fetchData () {
+      axios.get('https://safe-ridge-79537.herokuapp.com/getReport')
+      .then(response => {
+          this.reportData = response.data
+      })
+    }
+  }, created() {
+    this.fetchData()
   }
 }
 </script>
