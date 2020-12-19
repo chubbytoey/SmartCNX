@@ -15,8 +15,8 @@
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
-    "sass": "^1.30.0",
     "fibers": "^5.0.0",
+    "sass": "^1.30.0",
     "sass-loader": "^10.1.0"
   }
 }
