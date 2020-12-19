@@ -11,7 +11,7 @@
     </div>
     <div class="filter-sub">
       <select>
-        <option>ทุกหมวดหมู่</option>
+        <option>เรียงตามวันที่</option>
       </select>
     </div>
   </div>
@@ -54,6 +54,7 @@ export default {
         height: 40px;
         border-radius: 4px;
         border:1px solid rgb(0,0,0,0.1);
+        padding-left: 16px;
       }
     }
   }
