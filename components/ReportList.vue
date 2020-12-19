@@ -7,6 +7,13 @@
     <div class="info-landmark-title">คำอธิบายสถานที่:</div>
     <div class="info-landmark">ข้างวัดโมงตรงแถวๆทางโค้ง</div>
   </div>
+  <div class="status">
+    <select>
+      <option>รอตรวจสอบ</option>
+      <option>ดำเนินการแก้ไข</option>
+      <option>เสร็จสิ้น</option>
+    </select>
+  </div>
 </div>
 </template>
 <script>
@@ -49,6 +56,17 @@ export default {
     & > .info-landmark {
       font-size: 14px;
       color:rgb(0,0,0,0.85)
+    }
+  }
+  & > .status {
+    color:rgb(0,0,0,0.85);
+    height: 100%;
+    & > select {
+      width: 152px;
+      border-radius: 4px;
+      margin-top: 14px;
+      padding: 10px 28px;
+      border:solid 1px rgb(0,0,0,0.1);
     }
   }
 }
