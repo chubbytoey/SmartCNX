@@ -8,14 +8,16 @@
     <List />
     <List />
   </div>
+  <Button class="addnews" text="เพิ่มข่าวสาร"/>
 </div>
 </template>
 
 <script>
 import List from '../components/NewsList'
+import Button from '../components/Button'
 export default {
   components: {
-    List
+    List, Button
   }
 }
 </script>
@@ -24,12 +26,11 @@ export default {
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
   height: 749px;
 & > .block {
-  /* background-color: red; */
   width: 960px;
-  height: 600px;
+  margin-top: 40px;
   & > .title {
     height: 49px;
     background-color:rgb(0, 0, 0,0.02);
@@ -45,6 +46,9 @@ export default {
       margin-right: 202px;
     }
   }
+}
+& > .addnews {
+  margin-top: 60px;
 }
 }
 </style>

@@ -12,16 +12,20 @@
       <textarea class="config-height" placeholder="เนื้อหา"></textarea>
     </div>
     <div class="content-menu">
-      <button class="cancel">ยกเลิก</button>
-      <button class="confirm">ยืนยัน</button>
+      <Button class="cancel" text="ยกเลิก"/>
+      <Button class="confirm" text="ยืนยัน"/>
     </div>
   </div>
 </div>
 </template>
 
 <script>
+import Button from '../components/Button'
 export default {
-  layout: 'add'
+  layout: 'add',
+  components:{
+    Button
+  }
 }
 </script>
 
@@ -86,13 +90,6 @@ export default {
       padding: 0 120px;
       & > :first-child {
         margin-right: 8px;
-      }
-      & > button {
-        width: 140px;
-        height: 40px;
-        border: none;
-        font-size: 14px;
-        border-radius: 4px;
       }
       & > .cancel {
         color: #595959;
