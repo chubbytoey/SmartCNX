@@ -1,32 +1,37 @@
 <template>
-<div class="container">
-  <div class="filter">
-    <div class="filter-sub">
-      <select>
-        <option>ทุกหมวดหมู่</option>
-      </select>
-      <select>
-        <option>ทุกสถานะ</option>
-      </select>
+<div class="all-container">
+  <Title text="การแจ้งปัญหา"/>
+  <div class="container">
+    <div class="filter">
+      <div class="filter-sub">
+        <select>
+          <option>ทุกหมวดหมู่</option>
+        </select>
+        <select>
+          <option>ทุกสถานะ</option>
+        </select>
+      </div>
+      <div class="filter-sub">
+        <select>
+          <option>เรียงตามวันที่</option>
+        </select>
+      </div>
     </div>
-    <div class="filter-sub">
-      <select>
-        <option>เรียงตามวันที่</option>
-      </select>
+    <div class="report">
+      <List />
+      <List />
     </div>
-  </div>
-  <div class="report">
-    <List />
-    <List />
   </div>
 </div>
 </template>
 
 <script>
 import List from '../components/ReportList'
+import Title from '../components/Title'
 export default {
   components: {
-    List
+    List,
+    Title
   }
 }
 </script>

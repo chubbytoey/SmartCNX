@@ -4,7 +4,6 @@
   <div class="body-container">
     <Menu />
     <div class="sub-container">
-      <Title />
       <Nuxt />
     </div>
   </div>
@@ -14,10 +13,9 @@
 <script>
 import Header from '../components/Header'
 import Menu from '../components/Menu'
-import Title from '../components/Title'
 export default {
   components: {
-    Header, Menu, Title
+    Header, Menu
   }
 }
 </script>

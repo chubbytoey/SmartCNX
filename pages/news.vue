@@ -1,23 +1,27 @@
 <template>
-<div class="container">
-  <div class="block">
-    <div class="title">
-      <div class="text-title">ข่าวสาร</div>
-      <div class="text-time">วันที่เผยแพร่</div>
+<div class="all-container">
+  <Title text="ข่าวสาร"/>
+  <div class="container">
+    <div class="block">
+      <div class="title">
+        <div class="text-title">ข่าวสาร</div>
+        <div class="text-time">วันที่เผยแพร่</div>
+      </div>
+      <List />
+      <List />
     </div>
-    <List />
-    <List />
+    <Button class="addnews" text="เพิ่มข่าวสาร"/>
   </div>
-  <Button class="addnews" text="เพิ่มข่าวสาร"/>
 </div>
 </template>
 
 <script>
 import List from '../components/NewsList'
 import Button from '../components/Button'
+import Title from '../components/Title'
 export default {
   components: {
-    List, Button
+    List, Button, Title
   }
 }
 </script>
