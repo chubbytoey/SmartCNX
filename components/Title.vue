@@ -1,15 +1,20 @@
 <template>
-<div class="container">
-  <label>การแจ้งปัญหา</label>
+<div class="title-container">
+  <label>{{text}}</label>
 </div>
 </template>
 <script>
 export default {
-
+  props: {
+    text: {
+      type:String,
+      default:null
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
-.container {
+.title-container {
   width: 100%;
   height: 72px;
   background-color: #fff;
