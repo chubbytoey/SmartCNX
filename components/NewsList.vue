@@ -1,17 +1,22 @@
 <template>
 <div class="news-container">
   <div class="news-title">
-    สมาคมธุรกิจท่องเที่ยวเชียงใหม่ แถลง “Art for elephant” การกุศล ที่ศิริปันนา
+    {{data.topic}}
   </div>
   <div class="news-time">
-    12/12/2020, 12:12 PM
+    {{data.time}}
   </div>
 </div>
 </template>
 
 <script>
 export default {
-
+  props: {
+    data: {
+      type:Object,
+      default:null
+    }
+  }
 }
 </script>
 
