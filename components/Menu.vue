@@ -1,14 +1,14 @@
 <template>
 <div class="container">
-  <div class="submenu">
+  <NuxtLink class="submenu" to="/">
     ภาพรวม
-  </div>
-  <div class="submenu stay">
+  </NuxtLink>
+  <NuxtLink class="submenu" to="/report">
     <label>การแจ้งปัญหา</label>
-  </div>
-    <div class="submenu">
+  </NuxtLink>
+  <NuxtLink class="submenu" to="/news">
     ข่าวสาร
-  </div>
+  </NuxtLink>
 </div>
 </template>
 <script>
@@ -35,15 +35,15 @@ export default {
     padding-left: 16px;
     margin-bottom: 16px;
   }
+  & > .nuxt-link-exact-active {
+    background-color: rgb(255, 255, 255,0.1);
+    color:#fff;
+  }
   & > :last-child {
     margin-bottom: 0;
   }
   & > :first-child {
     margin-top: 32px;
-  }
-  & > .stay {
-    background-color: rgb(255, 255, 255,0.1);
-    color:#fff;
   }
 }
 </style>
