@@ -12,6 +12,7 @@
       <option value="รอตรวจสอบ">รอตรวจสอบ</option>
       <option value="ดำเนินการแก้ไข">ดำเนินการแก้ไข</option>
       <option value="เสร็จสิ้น">เสร็จสิ้น</option>
+      <option value="ปฎิเสธ">ปฎิเสธ</option>
     </select>
   </div>
 </div>
