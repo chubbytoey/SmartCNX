@@ -3,7 +3,7 @@
         <div class="mapcustom-wrap">
             <div
                 class="myMap"
-                style="width: 100%; height: 500px"
+                :style="`width:100%;height:${height}px`"
             />
         </div>
     </div>
@@ -12,7 +12,7 @@
 import axios from 'axios'
 
 export default {
-    props: [ 'mapClick' ],
+    props: [ 'mapClick','height' ],
     data() {
         return {
             position: {

@@ -1,24 +1,10 @@
 <template>
-	<div class="wrapper">
-		<!-- ภาพรวมและการ์ด -->
-		<div />
-		<!-- map -->
 		<div class="GoogleMap">
-			<div class="title">
-				แผนที่การดำเนินการปัจจุบัน
-			</div>
 			<google-map
           :mapClick="true"
+          :height="1000"
       />
-			<!-- <GmapMap
-				:center="{lat:10, lng:10}"
-				:zoom="7"
-				map-type-id="terrain"
-				style="width: 500px; height: 300px"
-				>         
-			</GmapMap> -->
 		</div>
-	</div>
 </template>
 
 <script>
@@ -37,6 +23,7 @@ export default {
 	},
 	components:{
 		GoogleMap
-	}
+  },
+  layout: 'lineliff'
 }
 </script>

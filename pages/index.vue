@@ -11,6 +11,7 @@
       </div>
       <google-map
           :mapClick="true"
+          :height="500"
       />
     </div>
   </div>
@@ -53,7 +54,7 @@ export default {
       }
       ]
     }
-  }, 
+  },
 }
 </script>
 
