@@ -10,7 +10,9 @@
       <List />
       <List />
     </div>
-    <Button class="addnews" text="เพิ่มข่าวสาร"/>
+    <NuxtLink to="/addnews">
+    <Button class="addnews" text="เพิ่มข่าวสาร" />
+    </NuxtLink>
   </div>
 </div>
 </template>

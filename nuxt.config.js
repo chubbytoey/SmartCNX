@@ -9,9 +9,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script:[
+      {src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDoN7LumV4NA8Vsvzw6S6id8pbxXGdqAD0"}
     ]
   },
-
+  
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'ant-design-vue/dist/antd.css'
