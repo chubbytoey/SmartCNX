@@ -19,7 +19,7 @@ export default {
 <style scoped lang="scss">
 .container {
   width: 240px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0D253F;
   display: flex;
   flex-direction: column;
