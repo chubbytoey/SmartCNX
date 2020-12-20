@@ -7,24 +7,41 @@
     <div class="content">
       <div class="title-content">รายละเอียด</div>
       <div class="sub-content">หัวข้อข่าว:</div>
-      <input type="text" placeholder="หัวข้อข่าว">
+      <input v-model="topic" type="text" placeholder="หัวข้อข่าว">
       <div class="sub-content">เนื้อหา:</div>
-      <textarea class="config-height" placeholder="เนื้อหา"></textarea>
+      <textarea v-model="detail" class="config-height" placeholder="เนื้อหา" />
     </div>
     <div class="content-menu">
-      <Button class="cancel" text="ยกเลิก"/>
-      <Button class="confirm" text="ยืนยัน"/>
+      <button class="cancel">ยกเลิก</button>
+      <button @click="connectAdd(topic,detail)" class="confirm">ยืนยัน</button>
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import Button from '../components/Button'
+// import Button from '../components/Button'
+import axios from 'axios'
 export default {
   layout: 'add',
   components:{
-    Button
+    // Button
+  },data() {
+    return {
+      topic: '',
+      detail: ''
+    }
+  },methods: {
+    connectAdd(topic,detail) {
+      const body = {
+        topic,detail
+      }
+      console.log('heyhey');
+      axios.post('https://safe-ridge-79537.herokuapp.com/addNews',body)
+      this.topic = ''
+      this.detail = ''
+      this.$router.push('/news')
+    }
   }
 }
 </script>
@@ -99,6 +116,17 @@ export default {
       & > .confirm {
         background-color:  #0094FF;
         color:#fff;
+      }
+      & > button {
+        width: 140px;
+        height: 40px;
+        border: none;
+        font-size: 14px;
+        border-radius: 4px;
+        border:none;
+        color: #fff;
+        background-color: #0094FF;
+        cursor: pointer;
       }
     }
   }
