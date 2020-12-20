@@ -2,23 +2,54 @@
 <div class="list-container">
   <img src="../assets/images/mockup-img.png">
   <div class="info">
-    <div class="info-main">#00001: ท่อประปามีปัญหา - 12/12/2020, 12:22 PM</div>
-    <div class="info-sub">วัดอุโมงค์,  135 หมู่ 10 ถนนสุเทพ อ.เมือง เชียงใหม่ (ดูแผนที่)</div>
-    <div class="info-landmark-title">คำอธิบายสถานที่:</div>
-    <div class="info-landmark">ข้างวัดโมงตรงแถวๆทางโค้ง</div>
+    <div class="info-main">{{data.categories}}</div>
+    <div class="info-sub">{{data.address}}</div>
+    <!-- <div class="info-landmark-title">คำอธิบายสถานที่:</div>
+    <div class="info-landmark">ข้างวัดโมงตรงแถวๆทางโค้ง</div> -->
   </div>
   <div class="status">
-    <select>
-      <option>รอตรวจสอบ</option>
-      <option>ดำเนินการแก้ไข</option>
-      <option>เสร็จสิ้น</option>
+    <select @change="changeStatus($event)">
+      <option value="รอตรวจสอบ">รอตรวจสอบ</option>
+      <option value="ดำเนินการแก้ไข">ดำเนินการแก้ไข</option>
+      <option value="เสร็จสิ้น">เสร็จสิ้น</option>
+      <option value="ปฎิเสธ">ปฎิเสธ</option>
     </select>
   </div>
 </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
-
+  props: {
+    data: {
+      type:Object,
+      default:null
+    }
+  },data(){
+    return{
+      img: null
+    }
+  },
+   methods: {
+    // fetchIMG(imgID) {
+    //   const headers = {
+    //     'Authorization':'Bearer {3XeWaAxm2oDah1k2mV7M6hWSEHR3mY2xlzaLJahbNuIvvydxnUdpKo7l/+jnm19uX9wZyuti9NuIrjrZEA2aJGw3rCe+Dq2D2c0IvsHqF1Km1PTh0fpdX8ce+crBVv0cD9umntsQBmfAGoURy+QbkAdB04t89/1O/w1cDnyilFU=}',
+    //   }
+    //   axios.get(`https://api-data.line.me/v2/bot/message/${imgID}/content`,{
+    //     headers
+    //   })
+    //   .then(response => {
+    //     console.log(response.data);
+    //   })
+    // },
+    changeStatus(event) {
+      const body = {
+        status: event.target.value
+      }
+      console.log(body);
+      axios.post(`https://safe-ridge-79537.herokuapp.com/updateReport/13231421250892`,body)
+    }
+  }
 }
 </script>
 <style scoped lang="scss">
