@@ -6,15 +6,20 @@
   <div class="detail">
     {{data.detail}}
   </div>
-  <div class="seemore">อ่านเพิ่มเติม...</div>
+  <div @click="changePage(data.news_id)" class="seemore">อ่านเพิ่มเติม...</div>
 </div>
 </template>
 <script>
+import newsVue from '../pages/news.vue'
 export default {
   props: {
     data: {
       type:Object,
       default:null
+    }
+  },methods: {
+    changePage (id) {
+      this.$router.push(`/descript?id=${id}`)
     }
   }
 }
@@ -34,6 +39,10 @@ export default {
     color:#000;
     font-size: 18px;
     font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
   }
   & > .detail {
     display: -webkit-box;
