@@ -14,7 +14,7 @@ export default {
       {src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDoN7LumV4NA8Vsvzw6S6id8pbxXGdqAD0"}
     ]
   },
-  
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'ant-design-vue/dist/antd.css'
@@ -38,5 +38,9 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+},
 }
