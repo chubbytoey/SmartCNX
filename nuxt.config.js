@@ -20,7 +20,7 @@ export default {
     },
     ]
   },
-  
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     'ant-design-vue/dist/antd.css'
@@ -44,5 +44,11 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+},  router: {
+  linkActiveClass: 'my-custom-active-link'
+}
 }

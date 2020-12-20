@@ -2,10 +2,8 @@
 <div class="list-container">
   <img src="../assets/images/mockup-img.png">
   <div class="info">
-    <div class="info-main">{{data.categories}}</div>
+    <div class="info-main">{{data.image}}: {{data.categories}} - {{data.time}}</div>
     <div class="info-sub">{{data.address}}</div>
-    <!-- <div class="info-landmark-title">คำอธิบายสถานที่:</div>
-    <div class="info-landmark">ข้างวัดโมงตรงแถวๆทางโค้ง</div> -->
   </div>
   <div class="status">
     <select @change="changeStatus($event)">
