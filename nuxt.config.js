@@ -11,7 +11,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script:[
-      {src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDoN7LumV4NA8Vsvzw6S6id8pbxXGdqAD0"}
+      // {
+      //   // src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDoN7LumV4NA8Vsvzw6S6id8pbxXGdqAD0"
+      //   src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekl'
+      // }
+      {
+        src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAhkT8xtTvPPMDuUMp-OvgsGGbSEJtqxWs&libraries=places'
+    },
     ]
   },
   

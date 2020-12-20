@@ -8,12 +8,8 @@
 				แผนที่การดำเนินการปัจจุบัน
 			</div>
 			<google-map
-				:initialPosition="location.lat ? {
-					lat: location.lat,
-					lng: location.lng
-				} :null"
-				:mapClick="true"
-			/>
+          :mapClick="true"
+      />
 			<!-- <GmapMap
 				:center="{lat:10, lng:10}"
 				:zoom="7"
@@ -27,6 +23,8 @@
 
 <script>
 import GoogleMap from '../components/GoogleMap'
+import axios from 'axios'
+import LogoVue from '../components/Logo.vue'
 
 export default {
 	data() {

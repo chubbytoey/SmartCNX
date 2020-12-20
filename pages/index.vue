@@ -9,7 +9,9 @@
       <div class="map-text">
         แผนที่การดำเนินการปัจจุบัน
       </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.954802819734!2d98.96827161500374!3d18.800167465469634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a60e3c61283%3A0x87e2c77af328d013!2sSiam%20Spa%20Health%20%26%20Beauty%20Co.%2C%20.Ltd.!5e0!3m2!1sth!2sth!4v1604586934934!5m2!1sth!2sth" width="1040" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <google-map
+          :mapClick="true"
+      />
     </div>
   </div>
 </div>
@@ -18,9 +20,14 @@
 <script>
 import Title from '../components/Title'
 import List from '../components/OverviewList'
+import GoogleMap from '../components/GoogleMap'
+import axios from 'axios'
+import LogoVue from '../components/Logo.vue'
+
 export default {
   components: {
-    Title, List
+    Title, List,
+    GoogleMap
   },data() {
     return {
       overviewButton: [{
@@ -46,7 +53,7 @@ export default {
       }
       ]
     }
-  }
+  }, 
 }
 </script>
 
