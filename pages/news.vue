@@ -9,7 +9,13 @@
       </div>
       <List v-for="item in newsData" :key="item.id" :data="item"/>
     </div>
+<<<<<<< HEAD
+    <NuxtLink to="/addnews">
+    <Button class="addnews" text="เพิ่มข่าวสาร" />
+    </NuxtLink>
+=======
     <NuxtLink to="/addnews"><button class="addnews">เพิ่มข่าวสาร</button></NuxtLink>
+>>>>>>> dfd5a65158f0ebac52c0f2a0ad5e35b005d19d57
   </div>
 </div>
 </template>
