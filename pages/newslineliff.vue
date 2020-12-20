@@ -1,7 +1,7 @@
 <template>
-<div class="container">
-<List v-for="data in newsData" :key="data.id" :data="data"/>
-</div>
+  <div class="container">
+    <List v-for="data in newsData" :key="data.id" :data="data"/>
+  </div>
 </template>
 <script>
 import axios from 'axios'
